@@ -1,0 +1,23 @@
+1) Setup paypal account:
+ - Log in and click Profile.
+ - Click the Website Payment Preferences link under Selling Preferences.
+ - Click the On radio button to enable Auto Return. (Auto Return for Website Payments)
+ - Enter the Return URL.: http://<your website>/payment/done
+
+ - Click the On the "Payment Data Transfer"
+
+2) set in /application/config/config.php following variables
+ - job.posting.price
+ - job.posting.currency
+ - paypal.use_sandbox to false if you do not use sandbox any more
+ - paypal.merchant.id - id of your account which will be use to receive money
+ - paypal.product.name - this title will be displayed on paypal page where user will be redirected to
+
+3) use following SQL script to setup DB: db/designer_jobs.sql
+It  creates DB with name 'designer_jobs'. If you want to use another name for DB then open this SQL file and replace DB name there
+
+4) Open file application/config/database.php, find 'Production configuration' and set following variables:
+ - hostname - change it in case if you run mysql server that isn't on the same server
+ - database
+ - username
+ - password
