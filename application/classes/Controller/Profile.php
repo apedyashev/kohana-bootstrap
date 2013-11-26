@@ -8,6 +8,6 @@
 class Controller_Profile extends My_LoggedUsersController {
 
   public function action_index(){
-    // You can be sure that $this->_loggedUser contains logged user
+    // You can be sure that $this->_loggedUser contains logged user. No additional checkings required
   }
 } 
